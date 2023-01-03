@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.LevelPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="{StaticResource Key=Accent}">
+                <Label x:Name="Banner" Text="1/10" HorizontalTextAlignment="Center" TextColor="{StaticResource Key=Text}" FontSize="36"/>
+            </Frame>
+            <Label x:Name="Scenario1" Text="Scenario 1" TextColor="{StaticResource Key=Text}" HorizontalOptions="Center" FontSize="30" Margin="40"></Label>
+            <Grid 
+            ColumnDefinitions="50*, 50*"
+            ColumnSpacing="8" 
+            HorizontalOptions="FillAndExpand" HeightRequest="250">
+                <Button x:Name="Optie1" Clicked="Optie1_Clicked" Text="Optie 1" Grid.Column="0" BackgroundColor="{StaticResource Key=Tertiary}" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="Optie2" Clicked="Optie2_Clicked" Text="Optie 2" Grid.Column="1" BackgroundColor="{StaticResource Key=Tertiary}" TextColor="White" HorizontalOptions="FillAndExpand"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Home" Clicked="Home_Clicked"/>
+        <ToolbarItem Text="Log uit" Clicked="LogUit_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

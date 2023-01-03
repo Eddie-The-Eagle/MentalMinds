@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="{StaticResource Key=Accent}">
+                <Label x:Name="Banner" Text="Welkom Bij Mental Minds!" HorizontalTextAlignment="Center" TextColor="{StaticResource Key=Text}" FontSize="36"/>
+            </Frame>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 30">
+                <Button x:Name="SpeelSpel" Text="Speel Spel" Clicked="SpeelSpel_Clicked" BackgroundColor="{StaticResource Key=Tertiary}" TextColor="White" CornerRadius="20" WidthRequest="300" Margin="0, 0, 0, 30"></Button>
+                <Button x:Name="Resultaten" Text="Resultaten" Clicked="Resultaten_Clicked"  BackgroundColor="{StaticResource Key=Secondary}" CornerRadius="20" TextColor="White" WidthRequest="300" Margin="0, 0, 0, 30"></Button>
+                <Button x:Name="Contact" Text="Contact" Clicked="Contact_Clicked"  BackgroundColor="{StaticResource Key=Primary}" CornerRadius="20" TextColor="White" WidthRequest="300" Margin="0, 0, 0, 30"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log uit" Clicked="LogUit_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

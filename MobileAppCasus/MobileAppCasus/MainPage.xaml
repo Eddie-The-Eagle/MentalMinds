@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="{StaticResource Key=Accent}">
+            <Label x:Name="Banner" Text="Mental Minds" HorizontalTextAlignment="Center" TextColor="{StaticResource Key=Text}" FontSize="36"/>
+        </Frame>
+        <Label Text="GEBRUIKERSNAAM" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 80, 0, 0"></Label>
+        <Entry x:Name="Username" Placeholder="Vul uw gebruikersnaam in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" Margin="30, 0, 30, 20"></Entry>
+        <Label Text="WACHTWOORD" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 0, 0, 0"></Label>
+        <Entry x:Name="Password" Placeholder="Vul uw wachtwoord in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" IsPassword="True" Margin="30, 0, 30, 30"></Entry>
+        <Label x:Name="Error" Text="" HorizontalTextAlignment="Center" TextColor="{StaticResource Key=Error}" FontSize="Medium"/>
+        <Button x:Name="Inlog" Text="Log in" Clicked="LogIn_Clicked" HorizontalOptions="Center" BackgroundColor="{StaticResource Key=Tertiary}" TextColor="White" CornerRadius="20" WidthRequest="350"></Button>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0, 5, 0, 0">
+            <Button x:Name="Registreer" Text="Registreer" Clicked="Registreer_Clicked" BackgroundColor="{StaticResource Key=Primary}" TextColor="White" CornerRadius="20" WidthRequest="175"></Button>
+            <Button x:Name="WachtwoordVergeten" Text="Wachtwoord vergeten?" Clicked="WachtwoordVergeten_Clicked" BackgroundColor="{StaticResource Key=Secondary}" CornerRadius="21" TextColor="White" WidthRequest="175"></Button>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

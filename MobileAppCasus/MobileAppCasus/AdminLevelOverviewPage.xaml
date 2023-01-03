@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.AdminLevelOverviewPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="levelAddToolbarItem" Text="Level Toevoegen" Clicked="levelAddToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="logoutToolbarItem" Text="Log uit" Clicked="logoutToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem Text="Home" Clicked="Home_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Level Overzicht" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Title" Margin="0, 20, 0, 0" TextColor="{StaticResource Key=Text}"></Label>
+            </StackLayout>
+            <ListView x:Name="levelListview" ItemSelected="levelListview_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding name}" Detail="{Binding number}" TextColor="{StaticResource Key=Text}" DetailColor="{StaticResource Key=Text}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

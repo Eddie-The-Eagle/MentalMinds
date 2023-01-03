@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.AdminLevelManagePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="deleteToolbarItem" Text="Verwijder" Clicked="deleteToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="homeToolbarItem" Text="Home" Clicked="homeToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="logoutToolbarItem" Text="Log uit" Clicked="logoutToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Margin="0,0,0,30">
+                <Label Text="Level" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource Key=Text}" FontSize="Title" Margin="0, 20, 0, 0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Level Naam" TextColor="{StaticResource Key=Text}" FontAttributes="Bold" Margin="30, 20, 0, 0"/>
+                <Button Scale="0.5" x:Name="levelEditNameButton" FontSize="30" FontAttributes="Bold" Text="✍" WidthRequest="50" HeightRequest="50" Clicked="levelEditNameButton_Clicked"></Button>
+            </StackLayout>
+            <Label x:Name="levelNameLabel" TextColor="{StaticResource Key=Text}" Text="Naam" Margin="30, 0, 30, 10"/>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Level Beschrijving" TextColor="{StaticResource Key=Text}" FontAttributes="Bold" Margin="30, 20, 0, 0"/>
+                <Button Scale="0.5" x:Name="levelEditDescriptionButton" FontSize="30" FontAttributes="Bold" Text="✍" WidthRequest="50" HeightRequest="50" Clicked="levelEditDescriptionButton_Clicked"></Button>
+            </StackLayout>
+            <Label x:Name="levelDescriptionLabel" Text="Beschrijving" TextColor="{StaticResource Key=Text}" Margin="30, 0, 30, 10"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Level Nummer" TextColor="{StaticResource Key=Text}" FontAttributes="Bold" Margin="30, 20, 0, 0"/>
+                <Button Scale="0.5" x:Name="levelEditNumberButton" FontSize="30" FontAttributes="Bold" Text="✍" WidthRequest="50" HeightRequest="50" Clicked="levelEditNumberButton_Clicked"></Button>
+            </StackLayout>
+            <Label x:Name="levelNumberLabel" Text="Nummer" TextColor="{StaticResource Key=Text}" Margin="30, 0, 30, 10"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Vragen" TextColor="{StaticResource Key=Text}" FontAttributes="Bold" Margin="30, 20, 0, 0"/>
+                <Button Scale="0.5" VerticalOptions="Center" x:Name="questionAddButton" Clicked="questionAddButton_Clicked" FontSize="Large" FontAttributes="Bold" Text="+" WidthRequest="50" HeightRequest="50"></Button>
+            </StackLayout>
+            <AbsoluteLayout x:Name="absLayout"  VerticalOptions="FillAndExpand" Margin="20,0,15,20">
+                <ListView x:Name="questionListView" ItemSelected="questionListView_ItemSelected" VerticalScrollBarVisibility="Always">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding question}" TextColor="{StaticResource Key=Text}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </AbsoluteLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Resultaten" TextColor="{StaticResource Key=Text}" FontAttributes="Bold" Margin="30, 20, 0, 0"></Label>
+                <Button Scale="0.5" x:Name="resultAddButton" Clicked="resultAddButton_Clicked" FontSize="Large" FontAttributes="Bold" Text="+" WidthRequest="50" HeightRequest="50"></Button>
+            </StackLayout>
+            <AbsoluteLayout x:Name="absLayout1"  VerticalOptions="FillAndExpand" Margin="20,0,20,10">
+                <ListView x:Name="resultListView" ItemSelected="resultListView_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding name}" Detail="{Binding minScore}" TextColor="{StaticResource Key=Text}" DetailColor="{StaticResource Key=Text}">
+                            </TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

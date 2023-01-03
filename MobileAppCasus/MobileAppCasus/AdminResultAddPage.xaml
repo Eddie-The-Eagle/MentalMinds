@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.AdminResultAddPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="homeToolbarItem" Text="Home" Clicked="homeToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="logoutToolbarItem" Text="Log uit" Clicked="logoutToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Resultaat Toevoegen" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource Key=Text}" FontSize="Title" Margin="0, 20, 0, 0"></Label>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Resultaat Naam" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 80, 0, 0"/>
+                <Entry x:Name="resultNameEntry" Placeholder="Geef de naam van het resultaat in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" Margin="30,0,30,10"/>
+                <Label Text="Beschrijving" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"/>
+                <Editor x:Name="resultDescriptionEntry" Placeholder="Geef beschrijving in" Margin="30,0,30,10" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" AutoSize="TextChanges"/>
+                <Label Text="Minimale Score" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"/>
+                <Entry x:Name="resultMinScoreEntry" Placeholder="Geef de minimale score in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" Margin="30,0,30,10"/>
+                <Label Text="Maximale Score" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"/>
+                <Entry x:Name="resultMaxScoreEntry" Placeholder="Geef de maximale score in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" Margin="30,0,30,10"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                <Label x:Name="labelHobbyError" Style="{StaticResource Label_Error}"></Label>
+                <Button x:Name="resultAddButton" Text="Voeg Resultaat Toe" Clicked="resultAddButton_Clicked" WidthRequest="250" BackgroundColor="{StaticResource Key=Primary}" TextColor="White" CornerRadius="20" Margin="0,0,0,30"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

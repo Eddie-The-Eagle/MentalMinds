@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.AdminQuestionManagePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="deleteToolbarItem" Text="Verwijder" Clicked="deleteToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="homeToolbarItem" Text="Home" Clicked="homeToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="logoutToolbarItem" Text="Log uit" Clicked="logoutToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+            <StackLayout>
+                <StackLayout Margin="0,0,0,30">
+                <Label Text="Vraag" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource Key=Text}" FontSize="Title" Margin="0, 20, 0, 0"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                <Label Text="Vraag" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"></Label>
+                    <Button Scale="0.5" x:Name="questionEditButton" FontSize="30" FontAttributes="Bold" Text="✍" WidthRequest="50" HeightRequest="50" Clicked="questionEditButton_Clicked"></Button>
+                </StackLayout>
+                <Label x:Name="questionLabel" Text="Naam" TextColor="{StaticResource Key=Text}" Margin="30, 0, 30, 10"></Label>
+                <AbsoluteLayout x:Name="absLayout"  VerticalOptions="FillAndExpand" Margin="20,0,15,20">
+                    <ListView x:Name="answerListView" ItemSelected="answerListView_ItemSelected" VerticalScrollBarVisibility="Always">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                            <TextCell Text="{Binding answer}" Detail="{Binding score}" TextColor="{StaticResource Key=Text}" DetailColor="{StaticResource Key=Text}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </AbsoluteLayout>
+            </StackLayout>
+        </ScrollView>
+</ContentPage>

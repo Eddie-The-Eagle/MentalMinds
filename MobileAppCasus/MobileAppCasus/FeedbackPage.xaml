@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.FeedbackPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="{StaticResource Key=Accent}">
+                <Label x:Name="Banner" Text="Feedback" HorizontalTextAlignment="Center" TextColor="{StaticResource Key=Text}" FontSize="36"/>
+            </Frame>
+            <Label x:Name="ResultNameLabel" Text="Resultaat 1 Naam" FontSize="36" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="{StaticResource Key=Text}" Margin="0, 30, 0, 0"></Label>
+            <Label x:Name="ResultDescriptionLabel" Text="Resultaat 1 Beschrijving" TextColor="{StaticResource Key=Text}" FontSize="20" Margin="15, 15, 15, 0"/>
+            <Button x:Name="Confirm" Clicked="Confirm_Clicked" Text="Ga terug naar het menu" BackgroundColor="{StaticResource Key=Secondary}" TextColor="White" CornerRadius="20" Margin="0, 30, 0, 70" WidthRequest="250" VerticalOptions="EndAndExpand" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Home" Clicked="Home_Clicked"/>
+        <ToolbarItem Text="Log uit" Clicked="LogUit_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

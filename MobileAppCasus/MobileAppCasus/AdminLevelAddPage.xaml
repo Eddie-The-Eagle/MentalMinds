@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.AdminLevelAddPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="homeToolbarItem" Text="Home" Clicked="homeToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="logoutToolbarItem" Text="Log uit" Clicked="logoutToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Level Toevoegen" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource Key=Text}" FontSize="Title" Margin="0, 20, 0, 0"></Label>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Level Naam" FontAttributes="Bold" Margin="30, 80, 0, 0" TextColor="{StaticResource Key=Text}"></Label>
+                <Entry x:Name="levelNameEntry" Placeholder="Geef de naam van het level in" Margin="30,0,30,10" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}"></Entry>
+                <Label Text="Level Beschrijving" FontAttributes="Bold" Margin="30, 20, 0, 0" TextColor="{StaticResource Key=Text}"></Label>
+                <Editor x:Name="levelDescriptionEntry" Placeholder="Geef de beschrijving van het level in" PlaceholderColor="{StaticResource Key=Text}" Margin="30,0,30,10" AutoSize="TextChanges" TextColor="{StaticResource Key=Text}"></Editor>
+                <Label Text="Level Nummer" FontAttributes="Bold" Margin="30, 20, 0, 0" TextColor="{StaticResource Key=Text}"/>
+                <Entry x:Name="levelNumberEntry" Placeholder="Geef het nummer van het level in" PlaceholderColor="{StaticResource Key=Text}" Margin="30,0,30,10" Keyboard="Numeric" TextColor="{StaticResource Key=Text}"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                <Label x:Name="labelHobbyError" Style="{StaticResource Label_Error}"></Label>
+                <Button x:Name="levelAddButton" Text="Voeg Level Toe" Clicked="levelAddButton_Clicked" BackgroundColor="{StaticResource Key=Primary}" TextColor="White" CornerRadius="20" WidthRequest="250" Margin="0,0,0,30"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.AdminHomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="{StaticResource Key=Accent}">
+                <Label Text="Admin Homepage" FontSize="36" TextColor="{StaticResource Key=Text}" HorizontalOptions="Center"></Label>
+            </Frame>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 30">
+                <Button Text="Beheer Gebruikers" x:Name="ManageUserButton" Clicked="ManageUserButton_Clicked" BackgroundColor="{StaticResource Key=Primary}" TextColor="White" CornerRadius="20" WidthRequest="300" Margin="0, 0, 0, 40"/>
+                <Button Text="Beheer Levels" x:Name="ManageLevelButton" Clicked="ManageLevelsButton_Clicked" BackgroundColor="{StaticResource Key=Primary}" TextColor="White" CornerRadius="20" WidthRequest="300"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log uit" Clicked="LogUit_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.AdminQuestionAddPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="homeToolbarItem" Text="Home" Clicked="homeToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="logoutToolbarItem" Text="Log uit" Clicked="logoutToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Vraag Toevoegen" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource Key=Text}" FontSize="Title" Margin="0, 20, 0, 0"></Label>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Vraag" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 80, 0, 0"/>
+                <Entry x:Name="questionEntry" Placeholder="Geef de vraag in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" Margin="30,0,30,10"/>
+                <Label Text="Antwoord 1" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"/>
+                <Entry x:Name="answerOneEntry" Placeholder="Geef antwoord 1 van de vraag in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" Margin="30,0,30,10"/>
+                <Label Text="Antwoord 1 Score" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"/>
+                <Entry x:Name="answerOneScoreEntry" Placeholder="Geef de score van antwoord 1 in (1 of 0)" PlaceholderColor="{StaticResource Key=Text}" Keyboard="Numeric" TextColor="{StaticResource Key=Text}" Margin="30,0,30,10"/>
+                <Label Text="Antwoord 2" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"/>
+                <Entry x:Name="answerTwoEntry" Placeholder="Geef antwoord 2 van de vraag in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" Margin="30,0,30,10"/>
+                <Label Text="Antwoord 2 Score" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"/>
+                <Entry x:Name="answerTwoScoreEntry" Placeholder="Geef de score van antwoord 2 in (1 of 0)" PlaceholderColor="{StaticResource Key=Text}" Keyboard="Numeric" TextColor="{StaticResource Key=Text}" Margin="30,0,30,10"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                <Label x:Name="labelHobbyError" Style="{StaticResource Label_Error}"></Label>
+                <Button x:Name="questionAddButton" Text="Voeg Vraag Toe" Clicked="questionAddButton_Clicked" WidthRequest="250" BackgroundColor="{StaticResource Key=Primary}" TextColor="White" CornerRadius="20" Margin="0,0,0,30"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

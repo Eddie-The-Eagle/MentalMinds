@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.RegistreerPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="{StaticResource Key=Accent}">
+                    <Label x:Name="Banner" Text="Registreren" HorizontalTextAlignment="Center" TextColor="{StaticResource Key=Text}" FontSize="36"/>
+                </Frame>
+                <Label Text="EMAIL" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 60, 0, 0"></Label>
+                <Entry x:Name="Email" Placeholder="Vul uw e-mailadres in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" Keyboard="Email" Margin="30, 0, 30, 20"></Entry>
+                <Label Text="GEBRUIKERSNAAM" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 0, 0, 0"></Label>
+                <Entry x:Name="Username" Placeholder="Vul uw gebruikersnaam in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" Keyboard="Email" Margin="30, 0, 30, 20"></Entry>
+                <Label Text="WACHTWOORD" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 0, 0, 0"></Label>
+                <Entry x:Name="Password" Placeholder="Vul uw wachtwoord in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" IsPassword="True" Margin="30, 0, 30, 30"></Entry>
+                <Label Text="WACHTWOORD BEVESTIGEN" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 0, 0, 0"></Label>
+                <Entry x:Name="PasswordConfirm" Placeholder="Vul uw wachtwoord in" PlaceholderColor="{StaticResource Key=Text}" TextColor="{StaticResource Key=Text}" IsPassword="True" Margin="30, 0, 30, 30"></Entry>
+                <Button x:Name="Registreer" Text="Registreer" Clicked="Registreer_Clicked" BackgroundColor="{StaticResource Key=Primary}" TextColor="White" CornerRadius="20" WidthRequest="350" HorizontalOptions="Center"></Button>
+                <Label x:Name="Error" Text="" HorizontalTextAlignment="Center" TextColor="{StaticResource Key=Error}" FontSize="Medium"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

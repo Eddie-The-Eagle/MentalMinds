@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.EindeSpelPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="{StaticResource Key=Accent}">
+                    <Label Text="Einde Spel" HorizontalTextAlignment="Center" TextColor="{StaticResource Key=Text}" FontSize="36"/>
+                </Frame>
+                <Label x:Name="Feedback" Text="Feedback" TextColor="{StaticResource Key=Text}" HorizontalOptions="Center" FontSize="30"  Margin="0, 30, 0, 0"></Label>
+                <Label x:Name="Error" Text="" TextColor="Red" HorizontalOptions="Center" FontSize="20"/>
+                <Label Text="Kies een optie" FontSize="25" TextColor="{StaticResource Key=Text}" Margin="20, 10, 0, 0"/>
+                <RadioButton x:Name="GeenHulp" Content="Ik wil geen hulp ontvangen" TextColor="{StaticResource Key=Text}" Margin="20, 10, 0, 0"/>
+                <RadioButton x:Name="AanradenHulp" Content="Ik wil alleen hulp aangeraden krijgen" TextColor="{StaticResource Key=Text}" Margin="20, 10, 0, 0"/>
+                <RadioButton x:Name="HulpKrijgen" Content="Ik wil dat er contact met mij wordt opgenomen" TextColor="{StaticResource Key=Text}" Margin="20, 10, 0, 0"/>
+                <Grid 
+            ColumnDefinitions="33.33*, 33.33*, 33.33*"
+            ColumnSpacing="8" 
+            HorizontalOptions="FillAndExpand" Margin="0, 50, 0, 0">
+                </Grid>
+                <Button x:Name="Confirm" Clicked="Confirm_Clicked" Text="Confirm" BackgroundColor="{StaticResource Key=Secondary}" TextColor="White" CornerRadius="20" Margin="0, 30, 0, 70" WidthRequest="300" VerticalOptions="EndAndExpand" HorizontalOptions="Center"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Home" Clicked="Home_Clicked"/>
+        <ToolbarItem Text="Log uit" Clicked="LogUit_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

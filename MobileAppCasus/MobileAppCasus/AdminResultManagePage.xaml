@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.AdminResultManagePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="deleteToolbarItem" Text="Verwijder" Clicked="deleteToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="homeToolbarItem" Text="Home" Clicked="homeToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="logoutToolbarItem" Text="Log uit" Clicked="logoutToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Margin="0,0,0,30">
+                <Label Text="Resultaat" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource Key=Text}" FontSize="Title" Margin="0, 20, 0, 0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Resultaat Naam" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"/>
+                <Button Scale="0.5" x:Name="resultNameEditButton" FontSize="30" FontAttributes="Bold" Text="✍" WidthRequest="50" HeightRequest="50" Clicked="resultNameEditButton_Clicked"></Button>
+            </StackLayout>
+            <Label x:Name="resultNameLabel" Text="Naam" TextColor="{StaticResource Key=Text}" Margin="30, 0, 30, 10"/>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Resultaat Beschrijving" TextColor="{StaticResource Key=Text}"  FontAttributes="Bold" Margin="30, 20, 0, 0"/>
+                <Button Scale="0.5" x:Name="resultDescriptionEditButton" FontSize="30" FontAttributes="Bold" Text="✍" WidthRequest="50" HeightRequest="50" Clicked="resultDescriptionEditButton_Clicked"></Button>
+            </StackLayout>
+            <Label x:Name="resultDescriptionLabel" Text="Beschrijving" TextColor="{StaticResource Key=Text}" Margin="30, 0, 30, 10"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Resultaat Min. Score" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"/>
+                <Button Scale="0.5" x:Name="resultMinScoreEditButton" FontSize="30" FontAttributes="Bold" Text="✍" WidthRequest="50" HeightRequest="50" Clicked="resultMinScoreEditButton_Clicked"></Button>
+            </StackLayout>
+            <Label x:Name="resultMinScoreLabel" Text="Nummer" TextColor="{StaticResource Key=Text}" Margin="30, 0, 30, 10"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Resultaat Max. Score" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30, 20, 0, 0"/>
+                <Button Scale="0.5" VerticalOptions="Center" x:Name="resultMaxScoreEditButton" Clicked="resultMaxScoreEditButton_Clicked" FontSize="Large" FontAttributes="Bold" Text="✍" WidthRequest="50" HeightRequest="50"></Button>
+            </StackLayout>
+            <Label x:Name="resultMaxScoreLabel" Text="Nummer" TextColor="{StaticResource Key=Text}" Margin="30, 0, 30, 10"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

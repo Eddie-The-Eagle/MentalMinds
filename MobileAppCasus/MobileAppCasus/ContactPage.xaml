@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppCasus.ContactPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="{StaticResource Key=Accent}">
+                <Label Text="Contact" FontSize="36" TextColor="{StaticResource Key=Text}" HorizontalOptions="Center"></Label>
+            </Frame>
+            <Label Text="Zuyd Luister" FontSize="30" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30,20,0,0"/>
+            <Label Text="voor mentale problemen" FontSize="18" TextColor="{StaticResource Key=Text}" Margin="30,0,0,0"/>
+            <Label Text="Telefoon: 0452372727" FontSize="18" TextColor="{StaticResource Key=Text}" Margin="30,0,0,0"/>
+            <Label Text="Email: zuydluister@zuyd.nl" FontSize="18" TextColor="{StaticResource Key=Text}" Margin="30,0,0,0"/>
+            <Label Text="Suicide Hotline" FontSize="30" FontAttributes="Bold" TextColor="{StaticResource Key=Text}" Margin="30,20,0,0"/>
+            <Label Text="Als je nadenkt over zelfdoding" FontSize="18" TextColor="{StaticResource Key=Text}" Margin="30,0,0,0"/>
+            <Label Text="Telefoon: 113" FontSize="18" TextColor="{StaticResource Key=Text}" Margin="30,0,0,0"/>
+            <Button Text="KLAAR" Clicked="Button_Clicked" HorizontalOptions='Center' BackgroundColor="{StaticResource Key=Primary}" TextColor="White" CornerRadius="20" FontSize="20" WidthRequest="250" Margin="0, 30, 0, 70" VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
